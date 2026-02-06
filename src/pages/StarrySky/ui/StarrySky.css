@@ -19,7 +19,7 @@
   width: 100%;
   height: 65vh;
   min-height: 400px;
-  background-color: #0f9eb5;
+  background-color: var(--color-canvas-bg);
   border-radius: 13px;
 }
 

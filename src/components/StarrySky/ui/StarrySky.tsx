@@ -11,7 +11,6 @@ import { renderFourQuarter } from '../lib/renderFourQuarter';
 
 const drawLines = false;
 
-
 export const StarrySkyMainChart: React.FC<IStarrySkyMainChart> = ({ dimensions, targetYear }) => {
     const isPriorityShowEducation = true;
 

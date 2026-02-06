@@ -7,12 +7,14 @@
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
   color: var(--color-text);
+  text-align: center;
 }
 
 .charts__intro {
   color: var(--color-text-muted);
   margin: 0 0 2rem 0;
   font-size: 1rem;
+  text-align: centerF;
 }
 
 .charts__grid {
@@ -22,10 +24,10 @@
 }
 
 .charts__card {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--color-card-bg);
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .charts__card h3 {
@@ -66,7 +68,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #EF877C;
+  background: var(--color-legend-plan);
   border-radius: 2px;
 }
 
@@ -75,6 +77,6 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: linear-gradient(180deg, #94a3b8, #475569);
+  background: linear-gradient(180deg, var(--color-legend-fact-start), var(--color-legend-fact-end));
   border-radius: 2px;
 }

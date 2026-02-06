@@ -67,3 +67,7 @@ export const DONUT_DATA = [
   { label: 'Redux', value: 20 },
   { label: 'Node.js', value: 15 },
 ] as const;
+
+export function isNotNullable(data: unknown): boolean {
+  return data !== null && data !== undefined;
+}

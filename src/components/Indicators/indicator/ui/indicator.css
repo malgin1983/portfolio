@@ -1,0 +1,435 @@
+/* SecondLayerIndicator */
+.big-indicator__indicator-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-indicator-box-bg);
+    gap: 16px;
+    isolation: isolate;
+    margin-left: 0;
+}
+
+.big-indicator__indicator-box:nth-child(1) {
+    margin-left: 0;
+}
+
+.big-indicator__indicator-box > div:nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.big-indicator__indicator-card {
+    width: 300px;
+    min-height: 300px;
+    padding: 16px;
+    border-radius: 13px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transition: transform 0.3s ease-in;
+    cursor: pointer;
+}
+
+.big-indicator__indicator-card--large {
+    min-width: 180px;
+    width: 180px;
+}
+
+.big-indicator__indicator-box--shrink {
+    margin-bottom: 44px;
+}
+
+.big-indicator__golden-indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 39px;
+    max-width: 100px;
+    min-height: 30px;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-size: var(--ls);
+    line-height: 16px;
+    background: conic-gradient(
+            from -53.9deg at 50% 50.44%,
+            var(--color-gold-1) -29.98deg,
+            var(--color-gold-2) 11.25deg,
+            var(--color-gold-3) 86.26deg,
+            var(--color-gold-1) 181.88deg,
+            var(--color-gold-base) 260.65deg,
+            var(--color-gold-1) 330.02deg,
+            var(--color-gold-2) 371.25deg
+    ),
+    var(--color-white);
+    border-radius: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+}
+
+.big-indicator__golden-indicator--ring {
+    margin-bottom: 12px;
+}
+
+.big-indicator__golden-indicator--arc {
+    margin-bottom: 6px;
+}
+
+.big-indicator__golden-indicator--bar {
+    margin-bottom: 8px;
+}
+
+.big-indicator__indicator-name {
+    min-width: 180px;
+    min-height: 42px;
+    font-weight: 400;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-size: var(--fs);
+    margin-bottom: auto;
+}
+
+.big-indicator__indicator-name__date {
+    font-family: var(--font-family-sber-sans-text-regular);
+    font-size: var(--t-12);
+    color: var(--color-gray600);
+    margin-top: 5px;
+}
+
+.big-indicator__indicator-name--tall {
+    min-height: 62px;
+}
+
+.big-indicator__indicator-name > svg:first-child {
+    margin-left: 200px;
+}
+
+.big-indicator__indicator-section {
+    width: 116px;
+    /* height: 166px; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.big-indicator__indicator-section svg {
+    overflow: visible !important;
+}
+
+.big-indicator__indicator-section > div:nth-child(3) {
+    position: absolute;
+    margin-right: -129px;
+    font-weight: 400;
+    font-family: var(--font-family-sber-sans-text-regular);
+    font-size: var(--fs-sm);
+    margin-top: 141px;
+    color: var(--color-gray500);
+}
+.big-indicator__stats-section {
+    gap: 6px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Факт */
+.big-indicator__stats-section > span:nth-child(1) {
+    min-width: 5px;
+    max-width: 90px;
+    height: 35px;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Проценты */
+.big-indicator__stats-section > span:nth-child(2) {
+    min-height: 36px;
+    max-height: 200px;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-weight: 600;
+    font-size: var(--t-22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.6px;
+    white-space: nowrap;
+}
+/* Черта */
+.big-indicator__stats-section > span:nth-child(3) {
+    height: 16px;
+    width: 1px;
+    background-color: var(--color-stats-muted);
+    flex-shrink: 0;
+}
+
+/* Встреч в день */
+.big-indicator__stats-section > span:nth-child(4),
+.big-indicator__stats-section > span:nth-child(5),
+.big-indicator__stats-section--bottom > span:nth-child(4) {
+    height: 18px;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    letter-spacing: -0.3px;
+    line-height: 18px;
+    color: var(--color-stats-muted);
+    display: flex;
+    align-items: center;
+}
+
+.big-indicator__stats-section--bottom {
+    gap: 6px;
+    width: 245px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+/* отступ */
+.big-indicator__stats-section--bottom--narrow {
+    height: 15px;
+}
+
+/* План + проценты */
+.big-indicator__stats-section--bottom > span:nth-child(1),
+.big-indicator__stats-section--bottom > span:nth-child(2) {
+    max-width: 100px;
+    min-height: 18px;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    letter-spacing: -0.3px;
+    line-height: 18px;
+    color: var(--color-stats-muted);
+}
+
+/* План + проценты (синий) */
+.big-indicator__stats-section__percents--blue {
+    color: var(--color-percent-blue);
+}
+
+.big-indicator__stats-section__percents--blue-narrow {
+    width: auto !important;
+}
+
+/* Черта */
+.big-indicator__stats-section--bottom > span:nth-child(3) {
+    height: 16px;
+    width: 1px;
+    background-color: var(--color-stats-muted);
+}
+
+.big-indicator__stats-section--bottom > span:nth-child(5) {
+    min-width: 5px;
+    max-width: 73px;
+    height: 28px;
+    font-family: var(--font-family-sber-sans-display-regular);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    color: var(--color-stats-muted);
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+}
+
+/* Скелетон */
+
+.main-page__skeleton-widget--semicircle::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--color-white);
+    z-index: 1;
+}
+
+.big-indicator__indicators--skeleton {
+    justify-content: center;
+    align-items: center;
+}
+
+.big-indicator__indicators--skeleton > span:nth-child(1) {
+    margin-bottom: 51px;
+}
+
+.big-indicator__indicators--skeleton > span:nth-child(2) {
+    margin-bottom: 36px;
+}
+
+.big-indicator__indicator-name--top {
+    max-width: 180px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+/* 1600+ */
+@media screen and (min-width: 1600px) {
+    .big-indicator__indicator-box {
+        width: 25%;
+    }
+}
+
+/* 1600+ */
+
+/* 1280 - 1600 */
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+    .big-indicator__indicator-box {
+        margin-left: 0;
+    }
+}
+/* 0 - 1280  */
+
+/* mobile 320-479px */
+
+@media screen and (max-width: 479px) {
+    .big-indicator__indicator-box:first-child,
+    .big-indicator__indicator-box {
+        margin: 0;
+    }
+
+    .big-indicator__indicatror-card {
+        width: 50%;
+        padding: 4px 0;
+    }
+
+    .big-indicator__golden-indicator {
+        min-height: 20px;
+        padding: 4px 4px 0 4px;
+
+        font-size: var(--fs);
+    }
+
+    .big-indicator__indicator-name {
+        min-width: 95%;
+        width: 95%;
+        min-height: 36px;
+        padding: 0 4px;
+
+        font-family: var(--font-family-sber-sans-text-semi-bold);
+        font-size: var(--t-16);
+        font-weight: 600;
+    }
+
+
+
+    .big-indicator__stats-section,
+    .big-indicator__stats-section--bottom {
+        width: 100%;
+
+        display: grid;
+        grid-template-areas:
+            'title percent line coefficient'
+            'title percent line meet';
+        column-gap: 4px;
+        row-gap: 0;
+    }
+
+    .big-indicator__stats-section > span,
+    .big-indicator__stats-section--bottom > span {
+        font-family: var(--font-family-sber-sans-text);
+        letter-spacing: 0;
+    }
+
+    .big-indicator__stats-section > span:nth-child(1),
+    .big-indicator__stats-section--bottom > span:nth-child(1) {
+        height: 30px;
+
+        grid-area: title;
+
+        position: relative;
+        top: 3px;
+
+        font-size: var(--fs-xs);
+    }
+
+    .big-indicator__stats-section > span:nth-child(2) {
+        min-height: 30px;
+
+        grid-area: percent;
+
+        font-family: var(--font-family-sber-sans-text-semi-bold);
+        font-size: var(--fs);
+    }
+
+    .big-indicator__stats-section > span:nth-child(3),
+    .big-indicator__stats-section--bottom > span:nth-child(3) {
+        height: 100%;
+
+        grid-area: line;
+    }
+
+    .big-indicator__stats-section > span:nth-child(4),
+    .big-indicator__stats-section--bottom > span:nth-child(4) {
+        height: 15px;
+
+        grid-area: coefficient;
+
+        font-size: var(--fs-xs);
+        line-height: 15px;
+    }
+
+    .big-indicator__stats-section > span:nth-child(5),
+    .big-indicator__stats-section--bottom > span:nth-child(5) {
+        height: 15px;
+
+        grid-area: meet;
+
+        line-height: 15px;
+        font-size: var(--fs-xs);
+    }
+
+    .big-indicator__stats-section--bottom {
+        margin-top: 8px;
+    }
+
+    .big-indicator__stats-section--bottom > span:nth-child(2) {
+        min-height: 30px;
+
+        font-family: var(--font-family-sber-sans-text-regular);
+        font-size: var(--fs);
+
+        grid-area: percent;
+    }
+
+    .big-indicator__stats-section--bottom--narrow {
+        height: auto;
+    }
+
+    .big-indicator__indicator-section {
+        width: 100%;
+    }
+
+    .big-indicator__indicator-section svg {
+        transform: scale(0.7);
+    }
+
+    .main-widget-layer-two-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .big-indicator__indicatror-card--large {
+        min-width: 150px;
+        width: 150px;
+    }
+}

@@ -1,0 +1,9 @@
+.indicator-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60vw;
+    margin: 0 auto;
+    gap: 5vw;
+}
