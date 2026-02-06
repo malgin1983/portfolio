@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgb(193 103 61 / 95%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav__logo {
+  font-family: 'Geist Sans', 'Manrope', 'Inter', system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: var(--color-bg-elevated);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--elevated-text);
+}
+
+.nav__link--active {
+  color: var(--color-bg-elevated);
+}

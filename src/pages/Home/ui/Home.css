@@ -1,0 +1,134 @@
+.home {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.home__photo-section {
+  margin-bottom: 2.5rem;
+}
+.home__photo {
+  width: 100%;
+  max-width: 44vw;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+.home__hero {
+  margin-bottom: 3rem;
+}
+
+.home__intro {
+  text-align: center;
+}
+
+.home__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.home__name {
+  font-weight: 600;
+}
+
+.home__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem 0;
+}
+
+.home__location {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.home__section {
+  margin-bottom: 2.5rem;
+}
+
+.home__section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+}
+
+.home__section p,
+.home__section ul {
+  margin: 0 0 1rem 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.home__section ul {
+  padding-left: 1.5rem;
+}
+
+.home__section li {
+  margin-bottom: 0.5rem;
+}
+
+.home__blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.home__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home__stack-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.home__stack-item strong {
+  color: var(--color-footer-text);
+  font-size: 0.9rem;
+}
+
+.home__stack-item span {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.home__contacts {
+  margin-bottom: 0;
+}
+
+.home__contact-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.home__contact-links a {
+  color: var(--color-footer-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home__contact-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .home__photo {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,57 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+
+:root {
+  --color-bg: #c1c3b6;;
+  --color-bg-elevated: #d4d7dc;
+  --color-text: #2d3139;
+  --color-text-muted: #455d94;
+  --color-accent: #e0e6ed;
+  --color-footer-text: #e34e1c;
+  --color-accent-dim: rgba(71, 85, 105, 0.15);
+
+  font-family: 'Inter', 'Geist Sans', 'Manrope', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Geist Sans', 'Manrope', 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#root {
+  min-height: 100vh;
+}

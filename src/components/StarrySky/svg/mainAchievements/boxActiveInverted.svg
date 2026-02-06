@@ -1,0 +1,18 @@
+<svg width="41.415527" height="33.995605" viewBox="0 0 41.4155 33.9956" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="paint_linear_1003_81233_0" x1="20.707764" y1="19.790527" x2="20.707764" y2="33.290527" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0085FF"/>
+            <stop offset="1.000000" stop-color="#0085FF" stop-opacity="0.000000"/>
+        </linearGradient>
+    </defs>
+    <path id="Vector 1263" d="M9.70776 20.7905L9.70776 32.2905C9.70776 32.8428 10.1555 33.2905 10.7078 33.2905L30.7078 33.2905C31.26 33.2905 31.7078 32.8428 31.7078 32.2905L31.7078 20.7905C31.7078 20.2383 31.26 19.7905 30.7078 19.7905L10.7078 19.7905C10.1555 19.7905 9.70776 20.2383 9.70776 20.7905Z" fill-rule="evenodd" fill="url(#paint_linear_1003_81233_0)"/>
+    <path id="Vector 1263" d="M9.70776 32.2905C9.70776 32.8428 10.1555 33.2905 10.7078 33.2905L30.7078 33.2905C31.26 33.2905 31.7078 32.8428 31.7078 32.2905L31.7078 20.7905C31.7078 20.2383 31.26 19.7905 30.7078 19.7905L10.7078 19.7905C10.1555 19.7905 9.70776 20.2383 9.70776 20.7905L9.70776 32.2905Z" stroke="#FFFFFF" stroke-width="1.410000"/>
+    <path id="Vector 1264" d="M0.707764 13.2905L9.70776 20.2905" stroke="#FFFFFF" stroke-width="1.410000" stroke-linecap="round"/>
+    <path id="Vector 1264" d="M40.7078 13.2905L31.7078 20.2905" stroke="#FFFFFF" stroke-width="1.410000" stroke-linecap="round"/>
+    <rect id="Rectangle 2105" x="8.708008" y="11.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45 8.708008 11.533203)" fill="#0085FF"/>
+    <rect id="Rectangle 2105" x="8.708008" y="11.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45 8.708008 11.533203)" stroke="#FFFFFF" stroke-width="1.410000"/>
+    <rect id="Rectangle 2107" x="24.708008" y="11.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45 24.708008 11.533203)" fill="#0085FF"/>
+    <rect id="Rectangle 2107" x="24.708008" y="11.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45 24.708008 11.533203)" stroke="#FFFFFF" stroke-width="1.410000"/>
+    <rect id="Rectangle 2106" x="16.708008" y="4.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45.0001 16.708008 4.533203)" fill="#0085FF"/>
+    <rect id="Rectangle 2106" x="16.708008" y="4.533203" rx="1.000000" width="6.000000" height="6.000000" transform="rotate(-45.0001 16.708008 4.533203)" stroke="#FFFFFF" stroke-width="1.410000"/>
+</svg>
