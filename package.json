@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-      "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist" 
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "push-deploy": "git add . && git commit -m 'update' && git push && npm run deploy"
   },
   "dependencies": {
     "@fontsource/geist-sans": "^5.2.5",

@@ -41,7 +41,6 @@ export function Navigation({ avatarUrl }: NavigationProps) {
       <ProfileModal
         isOpen={isProfileOpen}
         onClose={() => setIsProfileOpen(false)}
-        avatarUrl={avatarUrl}
       />
     </>
   );

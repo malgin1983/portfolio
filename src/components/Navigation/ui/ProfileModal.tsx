@@ -1,24 +1,28 @@
 import { useEffect } from 'react';
 import './ProfileModal.css';
 
-const PROFILE_TEXT = {
-  intro:
-    'Инженер-разработчик с 5-летним опытом создания high-load систем в закрытом контуре (FinTech / E-commerce). Берусь за полный цикл frontend-разработки и отвечаю за технические решения, выдерживая баланс между качеством кода и скоростью бизнеса.',
-  architecture:
-    'Применяю в проектах FSD, Microfrontends, Atomic Design, а также принципы SOLID, GRASP, KISS, DRY, YAGNI для поддерживаемой и масштабируемой фронтенд-архитектуры.',
-  focus:
-    'Увлекаюсь криптосистемами и высоконагруженными продуктами; активно использую AI-инструменты (Cursor, Claude Sonnet) для ускорения разработки, сохраняя строгий контроль архитектуры и качества кода.',
-  backend:
-    'Имею опыт разработки на Express, NestJS и Fastify (REST API, WebSocket) в рамках pet-проектов; понимаю принципы проектирования backend-сервисов и интеграции фронтенда с API.',
-};
+const CONTACTS = [
+  { label: 'Email', value: 'malghin@yandex.ru', href: 'mailto:malghin@yandex.ru' },
+  { label: 'Телефон', value: '+7 965 222-54-55', href: 'tel:+79652225455' },
+  { label: 'Telegram', value: '@vi18407633', href: 'https://t.me/vi18407633' },
+  {
+    label: 'LinkedIn',
+    value: 'vadim-malgin',
+    href: 'https://www.linkedin.com/in/vadim-malgin-a43349197/',
+  },
+  {
+    label: 'hh.ru',
+    value: 'Резюме',
+    href: 'https://hh.ru/resume/d3fdc24aff074ccc4a0039ed1f327062477239',
+  },
+] as const;
 
 interface ProfileModalProps {
   isOpen: boolean;
   onClose: () => void;
-  avatarUrl: string;
 }
 
-export function ProfileModal({ isOpen, onClose, avatarUrl }: ProfileModalProps) {
+export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
   useEffect(() => {
     if (!isOpen) return;
     const handleEscape = (e: KeyboardEvent) => {
@@ -57,30 +61,23 @@ export function ProfileModal({ isOpen, onClose, avatarUrl }: ProfileModalProps) 
           ×
         </button>
         <h2 id="profile-modal-title" className="profile-modal__title">
-          Вадим Мальгин
+          Контакты
         </h2>
-        <div className="profile-modal__avatar-wrap">
-          <img
-            src={avatarUrl}
-            alt=""
-            className="profile-modal__avatar"
-          />
-        </div>
-        <div className="profile-modal__content">
-          <p className="profile-modal__intro">{PROFILE_TEXT.intro}</p>
-          <section className="profile-modal__section">
-            <h3 className="profile-modal__section-title">Архитектурные подходы</h3>
-            <p>{PROFILE_TEXT.architecture}</p>
-          </section>
-          <section className="profile-modal__section">
-            <h3 className="profile-modal__section-title">Технологический фокус</h3>
-            <p>{PROFILE_TEXT.focus}</p>
-          </section>
-          <section className="profile-modal__section">
-            <h3 className="profile-modal__section-title">Backend (pet-проекты)</h3>
-            <p>{PROFILE_TEXT.backend}</p>
-          </section>
-        </div>
+        <ul className="profile-modal__contacts">
+          {CONTACTS.map(({ label, value, href }) => (
+            <li key={label} className="profile-modal__contact">
+              <span className="profile-modal__contact-label">{label}:</span>{' '}
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="profile-modal__contact-link"
+              >
+                {value}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

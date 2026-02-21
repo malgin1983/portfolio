@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import { SEARCH_PHRASES } from '../../../lib';
+import { Modal } from '../../../components/Modal';
 import './Home.css';
 
 const VADIM_COLORS = ['#4285f4', '#ea4335', '#fbbc04', '#4285f4', '#34a853'] as const; // Google-style: V a d i m
+
+type ModalKind = 'about' | 'stack' | null;
 
 export function Home() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isPause, setIsPause] = useState(false);
+  const [modalOpen, setModalOpen] = useState<ModalKind>(null);
 
   const phrase = SEARCH_PHRASES[phraseIndex];
   const visibleText = phrase.slice(0, charIndex);
@@ -59,6 +63,67 @@ export function Home() {
         </div>
       </div>
 
+      <div className="home__buttons">
+        <button
+          type="button"
+          className="home__btn"
+          onClick={() => setModalOpen('about')}
+        >
+          О себе
+        </button>
+        <button
+          type="button"
+          className="home__btn"
+          onClick={() => setModalOpen('stack')}
+        >
+          Стэк
+        </button>
+      </div>
+
+      <Modal
+        isOpen={modalOpen === 'about'}
+        onClose={() => setModalOpen(null)}
+        title="О себе"
+      >
+        <p>
+          Инженер-разработчик с 7-летним опытом создания high-load систем в закрытом контуре (FinTech / E-commerce).
+        </p>
+        <p>
+          Берусь за полный цикл frontend-разработки и отвечаю за технические решения, выдерживая баланс между качеством кода и скоростью бизнеса.
+        </p>
+        <section className="modal__section">
+          <h3 className="modal__section-title">Архитектурные подходы</h3>
+          <p>
+            Применяю в проектах FSD, Microfrontends, Atomic Design, а также принципы SOLID, GRASP, KISS, DRY, YAGNI для поддерживаемой и масштабируемой фронтенд-архитектуры.
+          </p>
+        </section>
+        <section className="modal__section">
+          <h3 className="modal__section-title">Технологический фокус</h3>
+          <p>
+            Увлекаюсь криптосистемами и высоконагруженными продуктами; активно использую AI-инструменты (Cursor, Claude Sonnet) для ускорения разработки, сохраняя строгий контроль архитектуры и качества кода.
+          </p>
+        </section>
+        <section className="modal__section">
+          <h3 className="modal__section-title">Backend (pet-проекты)</h3>
+          <p>
+            Имею опыт разработки на Express, NestJS и Fastify (REST API, WebSocket) в рамках pet-проектов; понимаю принципы проектирования backend-сервисов и интеграции фронтенда с API.
+          </p>
+        </section>
+      </Modal>
+
+      <Modal
+        isOpen={modalOpen === 'stack'}
+        onClose={() => setModalOpen(null)}
+        title="Стэк"
+      >
+        <ul>
+          <li><strong>Core:</strong> React (Next.js), TypeScript, Svelte.</li>
+          <li><strong>State / Data:</strong> Redux Toolkit (RTK Query), Zustand, TanStack Query.</li>
+          <li><strong>Styling:</strong> Material UI, Ant Design, Chakra UI, CSS Modules. Figma, Pixo.</li>
+          <li><strong>Tools:</strong> Webpack, Vite, SWC, Jest, Jenkins.</li>
+          <li><strong>Architecture:</strong> FSD, Layers + Shared Kernel, Atomic design, Microfrontends.</li>
+        </ul>
+      </Modal>
     </div>
   );
 }

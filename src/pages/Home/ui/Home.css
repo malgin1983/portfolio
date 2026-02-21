@@ -26,7 +26,40 @@
 
 .home__search-wrap {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.125rem;
+}
+
+.home__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.home__btn {
+  min-height: 36px;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #3c4043;
+  background: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.home__btn:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+  border-color: #dadce0;
+  color: #202124;
+}
+
+.home__btn:focus-visible {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 1px #4285f4;
 }
 
 .home__search-box {
