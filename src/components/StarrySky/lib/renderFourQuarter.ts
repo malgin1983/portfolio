@@ -68,13 +68,13 @@ const q4Diplom = { x: 525, y: 133 };
 const q4Mentor = { x: 680, y: 130 };
 const q4Box = { x: 865, y: 120 };
 const q4Book = { x: 540, y: 100 };
-const q4Like = { x: 667, y: 273 };
+const q4Like = { x: 657, y: 273 };
 const q4AntiControl = { x: 830, y: 200 };
 const q4AntiCase = { x: 740, y: 162 };
 const q4GiftBox = { x: 610, y: 155 };
 const q4Cup = { x: 730, y: 265 };
 const q4Plug = { x: 570, y: 290 };
-const q4Expert = { x: 600, y: 230 };
+const q4Expert = { x: 530, y: 230 };
 
 export const renderFourQuarter = (
     svg: Selection<SVGElement, unknown, null, undefined>,

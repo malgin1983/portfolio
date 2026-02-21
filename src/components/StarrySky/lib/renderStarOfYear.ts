@@ -10,6 +10,9 @@ const lineCoordinates: Array<Array<number>> = [
     [34, 15],
 ];
 
+const STAR_IMAGE_WIDTH = 148;
+const STAR_IMAGE_HEIGHT = 152;
+
 export const renderStarOfYear = (
     svg: Selection<SVGElement, unknown, null, undefined>,
     type: number,
@@ -18,6 +21,7 @@ export const renderStarOfYear = (
     drawLines: boolean,
     coordinatesLine: Array<IStarData>,
     handleClickStar: () => void,
+    options?: { centerImage?: boolean; imageWidth?: number; imageHeight?: number },
 ) => {
     const star = { x: 400, y: 350 };
     /** Отрисовка линий */
@@ -39,10 +43,21 @@ export const renderStarOfYear = (
 
     const url = STARRY_SKY_YEAR_STAR_URLS[type];
     if (url) {
+        const imgW = options?.imageWidth ?? STAR_IMAGE_WIDTH;
+        const imgH = options?.imageHeight ?? STAR_IMAGE_HEIGHT;
+        const rx = xScale.range();
+        const ry = yScale.range();
+        const centerX = (rx[0] + rx[1]) / 2;
+        const centerY = (ry[0] + ry[1]) / 2;
+        const x = options?.centerImage ? centerX - imgW / 2 : xScale(star.x);
+        const y = options?.centerImage ? centerY - imgH / 2 : yScale(star.y);
+
         svg.append('svg:image')
             .attr('xlink:href', url)
-            .attr('x', xScale(star.x))
-            .attr('y', yScale(star.y))
+            .attr('x', x)
+            .attr('y', y)
+            .attr('width', imgW)
+            .attr('height', imgH)
             .attr('cursor', 'pointer')
             .on('click', () => handleClickStar());
     }

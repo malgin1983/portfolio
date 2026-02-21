@@ -66,9 +66,9 @@ const starsCoordinatesQ1New = [
 ];
 
 /** Координаты рендера Ачивок главной страницы*/
-const q1QuarterImg = { x: 45, y: 500 };
+const q1QuarterImg = { x: 45, y: 537 };
 const q1Diplom = { x: 355, y: 430 };
-const q1Mentor = { x: 225, y: 475 };
+const q1Mentor = { x: 215, y: 495 };
 const q1Box = { x: 260, y: 510 };
 const q1Book = { x: 120, y: 410 };
 const q1Like = { x: 120, y: 343 };
