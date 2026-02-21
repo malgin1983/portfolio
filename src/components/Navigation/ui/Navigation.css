@@ -36,9 +36,13 @@
 .nav__avatar-link {
   display: block;
   margin-left: 0.5rem;
+  padding: 0;
+  border: none;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+  cursor: pointer;
+  background: none;
 }
 
 .nav__avatar {
