@@ -1,8 +1,9 @@
+import './Navigation.css';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { NAV_ITEMS } from '../../../lib';
-import { ProfileModal } from './ProfileModal';
-import './Navigation.css';
+import { ProfileModal } from '../../ProfileModal';
+
 
 interface NavigationProps {
   avatarUrl: string;
