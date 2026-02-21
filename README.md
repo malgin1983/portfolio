@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Вадим Мальгин
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Software Engineer · Frontend Developer**  
+React, TypeScript, Architecture, LLM · Москва
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Личный сайт-портфолио: главная в стиле Google, интерактивные графики и визуализация «Звёздное небо».
 
-## React Compiler
+## Обо мне
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+С 2020 года разрабатываю frontend для бизнес-продуктов в **Сбере**. Участвую в проектах **SmartMove** (управление структурой малого бизнеса) и **Геймификация бизнеса**. Ориентирован на production-grade разработку: от проектирования архитектуры до вывода в продакшен, с балансом между скоростью доставки фич и долгосрочной поддержкой кода.
 
-## Expanding the ESLint configuration
+**Ключевые компетенции:**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Архитектура и технологический стек: глубокие знания Next.js и TypeScript
+- Оптимизация и Performance: рендеринг, ресурсы браузера, отклик интерфейса
+- Автономность: веду крупные проекты с нуля до релиза, принимаю взвешенные технические решения
+- Полный цикл: от идеи до продакшена
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Стек:** React, TypeScript, Redux Toolkit (RTK Query), Next.js, Material UI · Git, Webpack, Vite, Jest, ESLint, Prettier, Figma · Node.js (Express), REST API, MongoDB · SPA, Micro-Frontends, CI/CD.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Языки:** русский (родной), English (B2 — Upper Intermediate).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+В свободное время изучаю интеграцию AI/ML во frontend, современные мета-фреймворки (Next.js App Router, RSC) и оптимизацию производительности (Lighthouse, Web Vitals). Увлекаюсь криптосистемами и высокотехнологичными продуктами, активно использую AI-инструменты.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Достижения:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Награда Сбера (2021) за быстрый вывод MVP проекта в продакшен
+- Внедрил архитектурные решения, сократившие время загрузки приложений примерно на 40%
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Проект
+
+- **Главная** — оформлена в стиле стартовой страницы Google: логотип «Vadim» и поочерёдный вывод информации обо мне в виде «поисковых запросов».
+- **Графики** — интерактивные диаграммы (столбчатые, линейные, кольцевые), реализованные на **D3.js** в рамках одного из рабочих проектов и адаптированные для портфолио.
+- **Звёздное небо** — интерактивная визуализация, полностью написанная мной на **D3.js** (canvas/SVG, анимация, отрисовка звёзд и созвездий).
+
+---
+
+## Контакты
+
+- **Email:** [malghin@yandex.ru](mailto:malghin@yandex.ru)
+- **LinkedIn:** [Vadim Malgin](https://www.linkedin.com/in/vadim-malgin-a43349197/)
+- **GitHub:** [malgin1983](https://github.com/malgin1983)
+
+---
+
+## Технологии
+
+React, TypeScript, Vite, React Router, D3.js. Шрифты: Inter, Geist Sans, Manrope.
+
+```bash
+npm install
+npm run dev
 ```

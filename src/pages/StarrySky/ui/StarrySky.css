@@ -1,18 +1,23 @@
 .starry-sky {
   max-width: 100%;
   margin: 0 auto;
+  width: 100%;
 }
 
 .starry-sky__title {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 400;
   margin: 0 0 0.5rem 0;
-  color: var(--color-text);
+  color: #202124;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 
 .starry-sky__intro {
-  color: var(--color-text-muted);
+  color: #5f6368;
   margin: 0 0 1.5rem 0;
   font-size: 1rem;
+  text-align: center;
 }
 
 .starry-sky__canvas {

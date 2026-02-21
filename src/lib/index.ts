@@ -43,6 +43,22 @@ export const NAV_ITEMS = [
   { to: '/starry-sky', label: 'Звёздное небо' },
 ] as const;
 
+/** Фразы для поочерёдного отображения в «поиске» на главной (как запросы) */
+export const SEARCH_PHRASES = [
+  'Вадим Мальгин',
+  'Software Engineer, Frontend Developer',
+  'React, TypeScript, Architecture, LLM',
+  'Москва',
+  'Опыт в Сбере с 2020',
+  'SmartMove, Геймификация бизнеса',
+  'Production-grade разработка, архитектура',
+  'Next.js, TypeScript, Redux, Node.js',
+  'SPA, Micro-Frontends, CI/CD',
+  'AI/ML во frontend, оптимизация производительности',
+  'Награда Сбера 2021, внедрение архитектурных решений',
+  'malghin@yandex.ru · LinkedIn · GitHub',
+] as const;
+
 export const BAR_DATA = [
   { label: 'Янв', plan: 40, fact: 35 },
   { label: 'Фев', plan: 55, fact: 52 },

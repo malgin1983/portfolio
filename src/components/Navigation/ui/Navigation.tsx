@@ -2,12 +2,13 @@ import { NavLink } from 'react-router-dom';
 import { NAV_ITEMS } from '../../../lib';
 import './Navigation.css';
 
-export function Navigation() {
+interface NavigationProps {
+  avatarUrl: string;
+}
+
+export function Navigation({ avatarUrl }: NavigationProps) {
   return (
     <nav className="nav">
-      <NavLink to="/" className="nav__logo">
-        ВМ
-      </NavLink>
       <ul className="nav__list">
         {NAV_ITEMS.map(({ to, label }) => (
           <li key={to}>
@@ -23,6 +24,9 @@ export function Navigation() {
           </li>
         ))}
       </ul>
+      <NavLink to="/" className="nav__avatar-link" aria-label="На главную">
+        <img src={avatarUrl} alt="Вадим Мальгин" className="nav__avatar" />
+      </NavLink>
     </nav>
   );
 }
